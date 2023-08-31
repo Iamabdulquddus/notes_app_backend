@@ -1,21 +1,10 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const db = require('../config/db');
-
 const { Schema } = mongoose;
-
 const userSchema = new Schema({
-    email: {
-        type: String,
-        lowercase: true,
-        require: true,
-        unique: true
-    },
-
-    password: {
-        type: String,
-        require: true,
-    },
+    email: {type: String, lowercase: true, require: true, unique: true},
+    password: {type: String, require: true,},
 
 });
 
